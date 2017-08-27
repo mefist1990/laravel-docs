@@ -64,17 +64,17 @@ Laravel обеспечивает быстрый способ поднять вс
 Команда `make: auth` также создаст каталог `resources/views/auth`, содержащий базовый макет для вашего приложения. Все эти представления используют фреймворк Bootstrap CSS, но вы можете их настроить, как пожелаете.
 
 <a name="included-authenticating"></a>
-### Authenticating
+### Authenticating (Проверка подлинности)
 
-Now that you have routes and views setup for the included authentication controllers, you are ready to register and authenticate new users for your application! You may simply access your application in a browser since the authentication controllers already contain the logic (via their traits) to authenticate existing users and store new users in the database.
+Теперь, когда у вас установлены маршруты и представления для включенных контроллеров проверки подлинности, вы готовы регистрировать и проверять подлинность новых пользователей для своего приложения! Вы можете просто получить доступ к своему приложению в браузере, поскольку контроллеры проверки подлинности уже содержат логику (через свои черты) для аутентификации существующих пользователей и хранения новых пользователей в базе данных.
 
-#### Path Customization
+#### Path Customization (Настройка пути)
 
-When a user is successfully authenticated, they will be redirected to the `/home` URI. You can customize the post-authentication redirect location by defining a `redirectTo` property on the `LoginController`, `RegisterController`, and `ResetPasswordController`:
+Когда пользователь успешно аутентифицирован, они будут перенаправлены на `/home` URI. Вы можете настроить местоположение перенаправления после аутентификации, указав `redirectTo` собственности на `LoginController`, `RegisterController`, и `ResetPasswordController`:
 
     protected $redirectTo = '/';
 
-If the redirect path needs custom generation logic you may define a `redirectTo` method instead of a `redirectTo` property:
+Если для пути перенаправления требуется логика пользовательского генерации, вы можете определить метод `redirectTo` вместо свойства `redirectTo`:
 
     protected function redirectTo()
     {
