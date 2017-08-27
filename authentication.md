@@ -1,7 +1,7 @@
 # Authentication
 
 - [введение](#introduction)
-    - [Database Considerations](#introduction-database-considerations)
+    - [Рекомендации по базам данных](#introduction-database-considerations)
 - [Authentication Quickstart](#authentication-quickstart)
     - [Routing](#included-routing)
     - [Views](#included-views)
@@ -22,9 +22,9 @@
 - [Events](#events)
 
 <a name="introduction"></a>
-## Introduction
+## Введение
 
-> {tip} **Want to get started fast?** Just run `php artisan make:auth` and `php artisan migrate` in a fresh Laravel application. Then, navigate your browser to `http://your-app.dev/register` or any other URL that is assigned to your application. These two commands will take care of scaffolding your entire authentication system!
+> {tip} **Хотите быстро начать работу?** Просто выполните `php artisan make:auth` и `php artisan migrate` в новом приложении Laravel. Затем перейдите в свой браузер, по адресу `http://your-app.dev/register` Или любой другой URL-адрес, назначенный вашему приложению. Эти две команды позаботятся о создании всей системы аутентификации!
 
 Laravel makes implementing authentication very simple. In fact, almost everything is configured for you out of the box. The authentication configuration file is located at `config/auth.php`, which contains several well documented options for tweaking the behavior of the authentication services.
 
