@@ -2,8 +2,8 @@
 
 - [введение](#introduction)
     - [Рекомендации по базам данных](#introduction-database-considerations)
-- [Authentication Quickstart](#authentication-quickstart)
-    - [Routing](#included-routing)
+- [Authentication Quickstart (Быстрый старт аутентификации)](#authentication-quickstart)
+    - [Routing (Маршрутизация)](#included-routing)
     - [Views](#included-views)
     - [Authenticating](#included-authenticating)
     - [Retrieving The Authenticated User](#retrieving-the-authenticated-user)
@@ -41,15 +41,15 @@ Laravel делает внедрение аутентификации очень 
 
 При построении схемы базы данных для `App\User`, убедитесь, что длина столбца паролей не менее 60 символов. Поддержание длины столбца строки по умолчанию из 255 символов было бы хорошим выбором.
 
-Also, you should verify that your `users` (or equivalent) table contains a nullable, string `remember_token` column of 100 characters. This column will be used to store a token for users that select the "remember me" option when logging into your application.
+Кроме того, вы должны убедиться, что ваш `users` (or equivalent) таблица содержит нулевую, строку `remember_token` столбец из 100 символов. Этот столбец будет использоваться для хранения токена для пользователей, которые выбирают опцию «запомнить меня» при входе в ваше приложение.
 
 <a name="authentication-quickstart"></a>
-## Authentication Quickstart
+## Authentication Quickstart (Быстрый старт аутентификации)
 
-Laravel ships with several pre-built authentication controllers, which are located in the `App\Http\Controllers\Auth` namespace. The `RegisterController` handles new user registration, the `LoginController` handles authentication, the `ForgotPasswordController` handles e-mailing links for resetting passwords, and the `ResetPasswordController` contains the logic to reset passwords. Each of these controllers uses a trait to include their necessary methods. For many applications, you will not need to modify these controllers at all.
+Laravel поставляется с несколькими предустановленными контроллерами аутентификации, которые расположены в `App\Http\Controllers\Auth` namespace. Контроллер `RegisterController` обрабатывает новую регистрацию пользователя, `LoginController` обрабатывает аутентификацию, `ForgotPasswordController` обрабатывает ссылки электронной почты для сброса паролей и `ResetPasswordController` содержит логику сброса паролей. Каждый из этих контроллеров использует черту, чтобы включить их необходимые методы. Для многих приложений вам не потребуется изменять эти контроллеры вообще.
 
 <a name="included-routing"></a>
-### Routing
+### Routing (маршрутизация)
 
 Laravel provides a quick way to scaffold all of the routes and views you need for authentication using one simple command:
 
