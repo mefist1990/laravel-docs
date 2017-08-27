@@ -3,7 +3,7 @@
 - [Introduction (введение)](#introduction)
     - [Database Considerations (Рекомендации по базам данных)](#introduction-database-considerations)
 - [Authentication Quickstart (Быстрый старт аутентификации)](#authentication-quickstart)
-    - [Routing (Маршрутизация)](#included-routing)
+    - [Routing(Маршрутизация)](#included-routing)
     - [Views](#included-views)
     - [Authenticating](#included-authenticating)
     - [Retrieving The Authenticated User](#retrieving-the-authenticated-user)
