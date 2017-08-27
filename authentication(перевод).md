@@ -81,20 +81,20 @@ Laravel обеспечивает быстрый способ поднять вс
         return '/path';
     }
 
-> {tip} The `redirectTo` method will take precedence over the `redirectTo` attribute.
+> {tip} Метод `redirectTo` будет иметь приоритет над атрибутом` redirectTo`.
 
-#### Username Customization
+#### Username Customization (Пользовательская настройка)
 
-By default, Laravel uses the `email` field for authentication. If you would like to customize this, you may define a `username` method on your `LoginController`:
+По умолчанию Laravel использует поле `email` для аутентификации. Если вы хотите настроить это, вы можете определить метод `username` на вашем` LoginController`:
 
     public function username()
     {
         return 'username';
     }
 
-#### Guard Customization
+#### Guard Customization (Настройка)
 
-You may also customize the "guard" that is used to authenticate and register users. To get started, define a `guard` method on your `LoginController`, `RegisterController`, and `ResetPasswordController`. The method should return a guard instance:
+Вы также можете настроить «guard», который используется для аутентификации и регистрации пользователей. Чтобы начать работу, определите метод `guard` на ваших` LoginController`, `RegisterController` и` ResetPasswordController`. Метод должен возвращать экземпляр защиты:
 
     use Illuminate\Support\Facades\Auth;
 
@@ -103,13 +103,13 @@ You may also customize the "guard" that is used to authenticate and register use
         return Auth::guard('guard-name');
     }
 
-#### Validation / Storage Customization
+#### Validation / Storage Customization (Настройка валидации / Хранения)
 
-To modify the form fields that are required when a new user registers with your application, or to customize how new users are stored into your database, you may modify the `RegisterController` class. This class is responsible for validating and creating new users of your application.
+Чтобы изменить поля формы, которые требуются, когда новый пользователь регистрируется с вашим приложением или настроить, как новые пользователи будут сохранены в вашей базе данных, вы можете изменить класс «RegisterController». Этот класс отвечает за проверку и создание новых пользователей вашего приложения.
 
-The `validator` method of the `RegisterController` contains the validation rules for new users of the application. You are free to modify this method as you wish.
+Метод `validator`` RegisterController` содержит правила проверки для новых пользователей приложения. Вы можете изменить этот метод, как хотите.
 
-The `create` method of the `RegisterController` is responsible for creating new `App\User` records in your database using the [Eloquent ORM](/docs/{{version}}/eloquent). You are free to modify this method according to the needs of your database.
+Метод `create` `RegisterController` отвечает за создание новых записей `App\User` в вашей базе данных с помощью [Eloquent ORM] (/docs/{{version}}/eloquent). Вы можете изменять этот метод в соответствии с потребностями вашей базы данных.
 
 <a name="retrieving-the-authenticated-user"></a>
 ### Retrieving The Authenticated User
