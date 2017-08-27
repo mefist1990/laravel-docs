@@ -24,18 +24,18 @@
 <a name="introduction"></a>
 ## Введение
 
-> {tip} **Хотите быстро начать работу?** Просто выполните `php artisan make:auth` и `php artisan migrate` в новом приложении Laravel. Затем перейдите в свой браузер, по адресу `http://your-app.dev/register` Или любой другой URL-адрес, назначенный вашему приложению. Эти две команды позаботятся о создании всей системы аутентификации!
+> {tip} **Хотите быстро начать работу?** Просто выполните `php artisan make:auth` и `php artisan migrate` в новом приложении Laravel. Затем перейдите в свой браузер, по адресу `http://your-app.dev/register` или любой другой URL-адрес, назначенный вашему приложению. Эти две команды позаботятся о создании всей системы аутентификации!
 
-Laravel makes implementing authentication very simple. In fact, almost everything is configured for you out of the box. The authentication configuration file is located at `config/auth.php`, which contains several well documented options for tweaking the behavior of the authentication services.
+Laravel делает внедрение аутентификации очень простым. Фактически, почти все настроено для вас из коробки. Файл конфигурации аутентификации находится по адресу `config/auth.php`, который содержит несколько хорошо документированных вариантов настройки поведения служб аутентификации.
 
-At its core, Laravel's authentication facilities are made up of "guards" and "providers". Guards define how users are authenticated for each request. For example, Laravel ships with a `session` guard which maintains state using session storage and cookies.
+По своей сути, средства аутентификации Laravel состоят из «охранников» и «провайдеров». Гвардейцы определяют, как пользователи аутентифицируются для каждого запроса. Например, Laravel отправляется с `session` который поддерживает состояние с использованием хранилища сеансов и файлов cookie.
 
-Providers define how users are retrieved from your persistent storage. Laravel ships with support for retrieving users using Eloquent and the database query builder. However, you are free to define additional providers as needed for your application.
+Поставщики определяют, как пользователи извлекаются из вашего постоянного хранилища. Laravel поставляется с поддержкой для извлечения пользователей с использованием Eloquent и построителя запросов базы данных. Тем не менее, вы можете свободно определять дополнительных поставщиков по мере необходимости для своего приложения.
 
-Don't worry if this all sounds confusing now! Many applications will never need to modify the default authentication configuration.
+Не волнуйтесь, если это все сейчас сбивает с толку! Многим приложениям никогда не потребуется изменять конфигурацию аутентификации по умолчанию.
 
 <a name="introduction-database-considerations"></a>
-### Database Considerations
+### Рекомендации по базам данных
 
 By default, Laravel includes an `App\User` [Eloquent model](/docs/{{version}}/eloquent) in your `app` directory. This model may be used with the default Eloquent authentication driver. If your application is not using Eloquent, you may use the `database` authentication driver which uses the Laravel query builder.
 
