@@ -1,7 +1,7 @@
 # Authentication
 
-- [введение](#introduction)
-    - [Рекомендации по базам данных](#introduction-database-considerations)
+- [Introduction (введение)](#introduction)
+    - [Database Considerations (Рекомендации по базам данных)](#introduction-database-considerations)
 - [Authentication Quickstart (Быстрый старт аутентификации)](#authentication-quickstart)
     - [Routing (Маршрутизация)](#included-routing)
     - [Views](#included-views)
@@ -22,7 +22,7 @@
 - [Events](#events)
 
 <a name="introduction"></a>
-## Введение
+## Introduction (введение)
 
 > {tip} **Хотите быстро начать работу?** Просто выполните `php artisan make:auth` и `php artisan migrate` в новом приложении Laravel. Затем перейдите в свой браузер, по адресу `http://your-app.dev/register` или любой другой URL-адрес, назначенный вашему приложению. Эти две команды позаботятся о создании всей системы аутентификации!
 
@@ -35,7 +35,7 @@ Laravel делает внедрение аутентификации очень 
 Не волнуйтесь, если это все сейчас сбивает с толку! Многим приложениям никогда не потребуется изменять конфигурацию аутентификации по умолчанию.
 
 <a name="introduction-database-considerations"></a>
-### Рекомендации по базам данных
+### Database Considerations (Рекомендации по базам данных)
 
 По умолчанию, Laravel включает `App\User` [Eloquent model](/docs/{{version}}/eloquent) в вашей `app` каталог. Эта модель может использоваться с драйвером проверки подлинности Eloquent по умолчанию. Если ваше приложение не использует Eloquent, вы можете использовать `database` который использует построитель запросов Laravel.
 
@@ -51,18 +51,17 @@ Laravel поставляется с несколькими предустано�
 <a name="included-routing"></a>
 ### Routing (маршрутизация)
 
-Laravel provides a quick way to scaffold all of the routes and views you need for authentication using one simple command:
+Laravel обеспечивает быстрый способ поднять все маршруты и представления, необходимые для аутентификации, с помощью одной простой команды:
 
     php artisan make:auth
 
-This command should be used on fresh applications and will install a layout view, registration and login views, as well as routes for all authentication end-points. A `HomeController` will also be generated to handle post-login requests to your application's dashboard.
-
+Эта команда должна использоваться в новых приложениях и будет устанавливать виды макета, регистрации и входа в систему, а также маршруты для всех конечных точек аутентификации. Контроллер `HomeController` также будет сгенерирован для обработки запросов после входа в панель приложений вашего приложения.
 <a name="included-views"></a>
-### Views
+### Views (Просмотры)
 
-As mentioned in the previous section, the `php artisan make:auth` command will create all of the views you need for authentication and place them in the `resources/views/auth` directory.
+Как упоминалось в предыдущем разделе, `php artisan make:auth` команда создаст все виды, необходимые для аутентификации, и поместит их в `resources/views/auth` каталог.
 
-The `make:auth` command will also create a `resources/views/layouts` directory containing a base layout for your application. All of these views use the Bootstrap CSS framework, but you are free to customize them however you wish.
+Команда `make: auth` также создаст каталог `resources/views/auth`, содержащий базовый макет для вашего приложения. Все эти представления используют фреймворк Bootstrap CSS, но вы можете их настроить, как пожелаете.
 
 <a name="included-authenticating"></a>
 ### Authenticating
