@@ -37,9 +37,9 @@ Laravel делает внедрение аутентификации очень 
 <a name="introduction-database-considerations"></a>
 ### Рекомендации по базам данных
 
-By default, Laravel includes an `App\User` [Eloquent model](/docs/{{version}}/eloquent) in your `app` directory. This model may be used with the default Eloquent authentication driver. If your application is not using Eloquent, you may use the `database` authentication driver which uses the Laravel query builder.
+По умолчанию, Laravel включает `App\User` [Eloquent model](/docs/{{version}}/eloquent) в вашей `app` каталог. Эта модель может использоваться с драйвером проверки подлинности Eloquent по умолчанию. Если ваше приложение не использует Eloquent, вы можете использовать `database` который использует построитель запросов Laravel.
 
-When building the database schema for the `App\User` model, make sure the password column is at least 60 characters in length. Maintaining the default string column length of 255 characters would be a good choice.
+При построении схемы базы данных для `App\User`, убедитесь, что длина столбца паролей не менее 60 символов. Поддержание длины столбца строки по умолчанию из 255 символов было бы хорошим выбором.
 
 Also, you should verify that your `users` (or equivalent) table contains a nullable, string `remember_token` column of 100 characters. This column will be used to store a token for users that select the "remember me" option when logging into your application.
 
